@@ -94,7 +94,7 @@ header{
 }
 
 /*Keyframes for animation*/
-@-webkit-keyframes logo_grow{
+/* @-webkit-keyframes logo_grow{
   0% {width: 25px; opacity: 0;}
   100% {width: 420px; opacity: 1;}
 
@@ -103,7 +103,7 @@ header{
 @keyframes logo_grow{
   0% {width: 25px; opacity: 0;}
   100% {width: 420px; opacity: 1;}
-} 
+}  */
 
 @media screen and (min-width: 850px){
 
@@ -150,11 +150,24 @@ header{
 }
 
 
-
+/*Test with @media screen and (min-width: 1000px)*/
 @media print { 
+  
+  /*Requirement 14 - remove background*/
+  body{
+    background-image: none; 
+  }
 
-  .nav {
-    width: 100%;
+  /*Requirement 15 - nav width*/
+  nav {
+    /* border: solid 2px red; */
+    width: 100%;    
+  }
+
+  /*Requirement 16 - nav_links spacing*/
+  header {
+    display: flex;
+    flex-direction: column;
   }
 
   .nav_links {
@@ -162,26 +175,20 @@ header{
     flex-direction: row;
     justify-content: space-around;
   }
-  /*Requirement 14*/
-  /*Requirement 15*/
-  /*Requirement 16*/
-  /*Requirement 17*/
-  /*Requirement 18*/
+
+  /*Requirement 17 - align to end*/
   .price {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* align-content: center;
-    justify-content: center; */
-    align-items: center;
+    align-items: flex-end;
   }
-
+  
+  
+  /*Requirement 18 - border and flex basis*/
   .package {
-   border: ;
-
+   border: solid 2px #45ADAD;
    flex-basis: 200px;
  }
 
+ /*Requirement 19 - hide gallery*/
  #gallery, .gallery {
    display: none;
  }
